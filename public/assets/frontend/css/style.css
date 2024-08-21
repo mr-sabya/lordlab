@@ -3333,6 +3333,7 @@ input[type=submit]:focus {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  align-items: center;
   font-weight: 500;
   list-style: none;
   margin-bottom: 0px;

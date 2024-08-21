@@ -7,26 +7,25 @@
                     <div class="section-head white-section-head">
                         <div class="divider-wrapper">
                             <span class="title-divider">
-                                <span class="top-title">SERVICE LIST</span>
+                                <span class="top-title">{{ $home_service->sub_heading }}</span>
                             </span>
                         </div>
                         <h2 class="section-title">
-                            <span class="title-highlight">Services</span>
-                            We Can Help You With !
+                            {!! $heading !!}
                         </h2>
                         <div class="section-disc">
                             <p>
-                                Vero id posuere tempus aspernatur quaerat mollis voluptatum eveniet porro viverra libero habitasse porro fames quos pharetra diam cupidatat ligula! Netus! Quos dignissi.
+                                {{ $home_service->text }}
                             </p>
                             <div class="service-list">
                                 <ul>
                                     <li>
                                         <i class="far fa-dot-circle"></i>
-                                        <span class="dot-list-text">Nobis ridiculus cupiditate egestas commodi.</span>
+                                        <span class="dot-list-text">{{ $home_service->feature_1 }}</span>
                                     </li>
                                     <li>
                                         <i class="far fa-dot-circle"></i>
-                                        <span class="dot-list-text">Ipsum dui curabitur dapibuish mollitia.</span>
+                                        <span class="dot-list-text">{{ $home_service->feature_2 }}</span>
                                     </li>
                                 </ul>
                             </div>
