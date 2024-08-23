@@ -16,4 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::name('admin.')->group(function () {
 
     Route::get('/', [App\Http\Controllers\Backend\HomeController::class, 'index'])->name('dashboard');
+
+    Route::prefix('portfolio')->group(function () {
+        Route::get('category', [App\Http\Controllers\Backend\Portfolio\CategoryController::class, 'index'])->name('portfolio.category.index');
+    });
+    
+    Route::prefix('media')->group(function () {
+        Route::get('image', [App\Http\Controllers\Backend\MediaController::class, 'image'])->name('media.image.index');
+    });
 });

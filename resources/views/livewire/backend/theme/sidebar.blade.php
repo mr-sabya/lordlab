@@ -15,13 +15,43 @@
             </a>
         </li>
         <li class="nav-group-title">APPS</li>
-        
 
-        
+        <li class="nav-submenu {{ Route::is('admin.portfolio.category.index') ? 'open' : '' }}">
+            <a class="nav-submenu-title">
+                <i class="feather icon-package"></i>
+                <span>Portfolio</span>
+                <i class="nav-submenu-arrow"></i>
+            </a>
+            <ul class="nav-menu menu-collapse" @if(Route::is('admin.portfolio.category.index')) style="display: block;" @endif>
+
+                <li class="nav-menu-item {{ Route::is('admin.portfolio.category.index') ? 'router-link-active' : '' }}">
+                    <a href="{{ route('admin.portfolio.category.index')}}" wire:navigate>Category</a>
+                </li>
+
+
+            </ul>
+        </li>
+        <li class="nav-submenu {{ Route::is('admin.media.image.index') ? 'open' : '' }}">
+            <a class="nav-submenu-title">
+                <i class="feather icon-package"></i>
+                <span>Media</span>
+                <i class="nav-submenu-arrow"></i>
+            </a>
+            <ul class="nav-menu menu-collapse" @if(Route::is('admin.media.image.index')) style="display: block;" @endif>
+
+                <li class="nav-menu-item {{ Route::is('admin.media.image.index') ? 'router-link-active' : '' }}">
+                    <a href="{{ route('admin.media.image.index')}}" wire:navigate>Image</a>
+                </li>
+
+
+            </ul>
+        </li>
+
+
 
         <li class="nav-group-title">USER INTERFACE</li>
 
-        
+
 
         <li class="nav-submenu {{ Route::is('admin.home.*') ? 'open' : '' }}">
             <a class="nav-submenu-title">
@@ -34,7 +64,7 @@
                 <li class="nav-menu-item ">
                     <a href="#" wire:navigate>Banner Section</a>
                 </li>
-                
+
 
             </ul>
         </li>
